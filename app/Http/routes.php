@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
+
+//flyers/create
+
+//flyers/$flyerId/edit
+
+// street
+Route::resource('flyers', 'FlyersController');
