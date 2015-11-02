@@ -4,9 +4,12 @@ namespace App\Http;
 
 class Flash {
 
-	public function message($message)
+	public function message($title, $message)
 	{
-		session()->flash('flash_message', $message);
+		return session()->flash('flash_message', [
+			'title'		=>$title,
+			'message' 	=> $message
+		]);
 	}
 }
 
